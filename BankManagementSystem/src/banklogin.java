@@ -409,12 +409,13 @@ public class banklogin extends Application {
 		int accholdno = Integer.parseInt(t11);
 		int panholdno = Integer.parseInt(t12);
 		int mobholdno = Integer.parseInt(t13);*/
+		String ib="0";
 		b1.setOnAction(e-> {
 			accholdname= t1.getText();
 			t11 = t2.getText();
 			t12= t3.getText();
 			t13= t4.getText();
-			String statement="INSERT INTO customer VALUES('"+accholdname+"','"+t11+"','"+t12+"','"+t13+"')";
+			String statement="INSERT INTO customer VALUES('"+accholdname+"','"+t11+"','"+t12+"','"+t13+"','"+ib+"')";
 			db.insertacc(statement);
 		});
 		gp.getChildren().addAll(name,accno,pan,mobile,t1,t2,t3,t4,b1);
